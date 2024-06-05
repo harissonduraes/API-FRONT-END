@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Receber Dados da API</title>
+	<style>
+	</style>
+</head>
+
+<body>
+	<h1>Receber Dados da API</h1>
+	<form id="apiForm">
+		<label for="apiUrl">API URL:</label>
+		<input type="text" id="apiUrl" placeholder="Digite a URL da API" value="https://localhost:7233/api/cad-pessoa">
+		<button type="submit">Buscar Dados</button>
+	</form>
+
+	<form id="usuarioForm" method="post" action="">
+		<label for="Usuário">Criar Usuário</label>
+		<div id="Usuário">
+			<input type="text" name="nome" id="name" placeholder="Digite o nome do Usuário">
+			<input type="number" name="peso" id="weight" placeholder="Digite o peso" min="0">
+			<input type="number" name="idade" id="age" placeholder="Digita a idade" max="130" min="0">
+			<input type="number" name="altura" id="height" placeholder="Digite a altura" min="0">
+		</div>
+
+		<label for="Profissão">Profissão do Usuário</label>
+		<div id="Profissão">
+			<input type="text" name="empresa" id="empresaNome" placeholder="Digite o nome da empresa">
+			<input type="text" name="cargo" id="cargoNome" placeholder="Digite o cargo na empresa">
+			<input type="text" name="cnpj" id="empresaCnpj" placeholder="Digite o CNPJ da empresa">
+		</div>
+
+		<button onclick="enviarDados(event)" id="post-btn" type="submit">Enviar Dados</button>
+	</form>
+	<div class="results" id="results">
+		<!-- Dados da API serão exibidos aqui -->
+	</div>
+
+
+	<script>
+	</script>
+</body>
+<script src="script.js"></script>
+
+</html>

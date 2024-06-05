@@ -1,0 +1,52 @@
+/* html {
+			padding-left: 300px;
+			padding-right: 200px;
+		} */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 20px;
+    display: grid;
+    /* width | style | color */
+    /* border: 2px solid; */
+    /* border: 5px outset yellow; */
+    /* border-radius: 4px; */
+    /* outline: 2px solid; */
+    /* box-shadow: 0 0 0 2px skyblue; */
+    /* outline-offset: 0.2rem; */
+    /* border-color: black; */
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+}
+
+input {
+    padding: 8px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+div .card {
+    border: 2px solid;
+    border-radius: 4px;
+    padding: 20px;
+}
+
+.results {
+    margin-top: 20px;
+
+}
+
+.results div {
+    margin-bottom: 10px;
+
+
+}
