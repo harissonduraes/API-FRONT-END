@@ -38,15 +38,29 @@ div .card {
     border: 2px solid;
     border-radius: 4px;
     padding: 20px;
+    margin: 20px;
 }
 
 .results {
     margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
 
 }
 
 .results div {
     margin-bottom: 10px;
+}
 
+.ativar {
+    display: none;
+}
 
+button {
+    width: 200px;
+}
+
+#buttons {
+    display: flex;
+    justify-content: space-between;
 }

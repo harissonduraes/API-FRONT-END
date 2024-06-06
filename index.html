@@ -11,14 +11,21 @@
 </head>
 
 <body>
+	<!-- HEAD -->
 	<h1>Receber Dados da API</h1>
 	<form id="apiForm">
 		<label for="apiUrl">API URL:</label>
 		<input type="text" id="apiUrl" placeholder="Digite a URL da API" value="https://localhost:7233/api/cad-pessoa">
-		<button type="submit">Buscar Dados</button>
+		<div id="buttons">
+			<button type="submit">Buscar Dados</button>
+			<button type="button" id="buttonCreate">Criar Usuário</button>
+			<button type="button" id="buttonUpdate">Atualizar Usuário</button>
+			<button type="button" id="buttonDelete">Deletar Usuário</button>
+		</div>
 	</form>
 
-	<form id="usuarioForm" method="post" action="">
+	<!-- CREATE -->
+	<form id="usuarioCreate" method="post" action="" class="ativar">
 		<label for="Usuário">Criar Usuário</label>
 		<div id="Usuário">
 			<input type="text" name="nome" id="name" placeholder="Digite o nome do Usuário">
@@ -36,6 +43,36 @@
 
 		<button onclick="enviarDados(event)" id="post-btn" type="submit">Enviar Dados</button>
 	</form>
+
+	<!-- UPDATE -->
+	<form id="usuarioUpdate" method="post" action="" class="ativar">
+		<label for="Usuário">Atualizar Usuário</label>
+		<div id="Usuário">
+			<input type="text" name="id" id="id" placeholder="Digite o ID">
+			<input type="text" name="nome" id="name" placeholder="Digite o nome do Usuário">
+			<input type="number" name="peso" id="weight" placeholder="Digite o peso" min="0">
+			<input type="number" name="idade" id="age" placeholder="Digita a idade" max="130" min="0">
+			<input type="number" name="altura" id="height" placeholder="Digite a altura" min="0">
+		</div>
+
+		<label for="Profissão">Profissão do Usuário</label>
+		<div id="Profissão">
+			<input type="text" name="empresa" id="empresaNome" placeholder="Digite o nome da empresa">
+			<input type="text" name="cargo" id="cargoNome" placeholder="Digite o cargo na empresa">
+			<input type="text" name="cnpj" id="empresaCnpj" placeholder="Digite o CNPJ da empresa">
+		</div>
+
+		<button onclick="atualizarDados(event)" id="put-btn" type="submit">Enviar Dados</button>
+	</form>
+
+	<!-- DELETE -->
+	<form id="usuarioDelete" action="" method="post" class="ativar">
+		<label for="">Deletar Usuário</label>
+		<input type="text" name="delete" id="id-delete" placeholder="Digite o ID do Usuário a ser excluído">
+		<button onclick="deletar(event)" type="submit">Excluir Usuário</button>
+	</form>
+
+	<!-- READ -->
 	<div class="results" id="results">
 		<!-- Dados da API serão exibidos aqui -->
 	</div>
